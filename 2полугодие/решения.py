@@ -1,10 +1,10 @@
 #задание №5
-
-i=10
-b= bin(i)[2:];
-b = f'{i:b}';
-print(b);
-b='10'+b+'1';
-c=int(b,5);
-print(c);
-
+for N in range(516):
+    b = f'{N:b}'
+    if N % 2 == 0:
+        b += '10'
+    else:
+        b = '1' + b + '01'
+    if int(b,2) > 516:
+        print(N)
+        break
